@@ -78,28 +78,3 @@ def extract_treatment_plans(
         chemo_plan.append((current_start, end_day, kill_rate))
     
     return rt_plan, chemo_plan
-
-
-# Example usage for HGG_demo_001
-if __name__ == "__main__":
-    json_path = "./HGG_demo_001/HGG_demo_001.json"
-    
-    rt_plan, chemo_plan = extract_treatment_plans(json_path)
-    
-    print("Radiotherapy Plan (rt_plan):")
-    print("Dictionary format: {day: dose_in_Gy}")
-    print(rt_plan)
-    print(f"\nTotal RT sessions: {len(rt_plan)}")
-    print(f"RT days range: {min(rt_plan.keys())} to {max(rt_plan.keys())}")
-    
-    print("\n" + "="*60)
-    print("\nChemotherapy Plan (chemo_plan):")
-    print("List format: [(start_day, end_day, kill_rate), ...]")
-    print(chemo_plan)
-    print(f"\nTotal chemo cycles: {len(chemo_plan)}")
-    
-    # Also print as variables for easy copy-paste
-    print("\n" + "="*60)
-    print("\nVariables for direct use:")
-    print(f"\nrt_plan = {rt_plan}")
-    print(f"\nchemo_plan = {chemo_plan}")
