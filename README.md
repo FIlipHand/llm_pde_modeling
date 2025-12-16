@@ -1,3 +1,10 @@
+To get the data run:
+```
+wget https://github.com/OncologyModelingGroup/TumorTwin/raw/refs/heads/main/input_files/HGG_demo_001.tar.gz
+tar -xzvf HGG_demo_001.tar.gz
+```
+
+
 # BASIC PROMPT
 
 I am a medical researcher working on High-Grade Glioma (HGG) treatment prediction. I need a mathematical model specification to simulate tumor evolution for a specific patient.
