@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+HGG_demo_001/*
+TNBC_demo_001/*
+*.tar.gz

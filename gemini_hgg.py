@@ -226,8 +226,12 @@ model.load_initial_condition(measured_cellularity_maps[0].array, affine=np.eye(4
 time, c_history = model.run_simulation(total_days=270, rt_schedule=rt_plan, chemo_schedule=chemo_plan)
 print(f"Number of days stored: {len(c_history)}")
 
+
 # Compute tumor counts from c arrays for plotting
-tumor_counts = [compute_total_cell_count(c, model.K) for c in c_history]
+tumor_counts = [compute_total_cell_count(c, 5062500) for c in c_history] # value from docs
+history_file = "./experiment_data/HGG_llm.npy"
+np.save(history_file, tumor_counts)
+exit()
 # Create day numbers corresponding to c_history
 days = list[int](range(len(c_history)))
 print(days)
